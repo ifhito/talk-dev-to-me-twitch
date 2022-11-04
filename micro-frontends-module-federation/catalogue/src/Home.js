@@ -29,7 +29,7 @@ const generateClassName = createGenerateClassName({
 });
 
 const Home = () => {
-    let {pathname: path}  = useMatch('/shop/*');
+    let { pathname: path }  = useMatch('/shop/*');
     return(
         <StylesProvider generateClassName={generateClassName}>
             <div>
