@@ -1,5 +1,5 @@
 import React from "react";
-import {useRouteMatch} from "react-router-dom";
+import {useMatch} from "react-router-dom";
 import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
 import Product from "./Product";
 
@@ -29,8 +29,7 @@ const generateClassName = createGenerateClassName({
 });
 
 const Home = () => {
-    let { path } = useRouteMatch();
-
+    let {pathname: path}  = useMatch('/shop/*');
     return(
         <StylesProvider generateClassName={generateClassName}>
             <div>
